@@ -52,7 +52,7 @@ a:hover {
 a.active {
   border-bottom: 4px solid var(--logo-web-color);
   border-radius: 2px;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
 }
 
 h1 {
@@ -447,6 +447,7 @@ header {
 
 .modal-content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 16px;
@@ -454,6 +455,10 @@ header {
   width: 400px;
   height: 580px;
   position: relative;
+}
+
+.modal-content p {
+  font-weight: 500;
 }
 
 .close-btn {
@@ -464,6 +469,66 @@ header {
   top: 24px;
   right: 24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.inputs {
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 35px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid grey;
+  margin-top: 4px;
+  outline: none;
+}
+
+.input:focus {
+  outline: 1px solid var(--logo-web-color);
+  border: 1px solid var(--logo-web-color);
+  transition: var(--transition);
+}
+
+.input-text {
+  color: var(--primary-color);
+  padding-left: 16px;
+  height: auto;
+}
+
+textarea {
+  resize: none;
+  margin-top: 4px;
+}
+
+label {
+  font-size: 12px;
+  color: var(--clients-icons-color);
+}
+
+label svg {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  margin: 35px -20px;
+}
+
+label:focus svg {
+  fill: var(--logo-web-color);
+}
+
+.terms-and-conditions {
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.terms-and-conditions span {
+  color: var(--logo-web-color);
+  text-decoration: underline;
 }
 
 .overlay {
