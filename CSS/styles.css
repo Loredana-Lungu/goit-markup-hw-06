@@ -282,6 +282,70 @@ header {
   color: var(--footer-text-color);
 }
 
+.footer-input {
+  display: flex;
+  width: 200px;
+  display: flex;
+  height: 40px;
+  background-color: var(--primary-color);
+  border-radius: 4px;
+  border: 1px solid var(--footer-text-color);
+  margin-top: 15px;
+  outline: none;
+}
+
+.footer-input::placeholder {
+  font-size: 12px;
+  color: var(--footer-text-color);
+  padding-left: 15px;
+}
+
+.subscribe-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  position: absolute;
+}
+
+.subscribe-container label {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--footer-text-color);
+  padding-left: 15px;
+  caret-color: var(--footer-text-color);
+}
+
+.subscribe-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--logo-web-color);
+  color: var(--footer-text-color);
+  border: none;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  width: 170px;
+  height: 40px;
+  outline: none;
+  cursor: pointer;
+}
+
+.subscribe-btn:hover {
+  cursor: pointer;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.subscribe-container svg {
+  width: 24px;
+  height: 20px;
+  fill: var(--footer-text-color);
+  position: relative;
+  right: 60px;
+  bottom: 10px;
+}
+
 .filters ul {
   display: flex;
   justify-content: center;
@@ -423,6 +487,7 @@ header {
   height: 50px;
 }
 
+/* Modal */
 .is-hidden {
   visibility: hidden;
   transform: scale(1.1);
@@ -473,6 +538,7 @@ header {
 
 .inputs {
   width: 100%;
+  margin-top: -5px;
 }
 
 .input {
@@ -517,8 +583,9 @@ label svg {
   margin: 35px -20px;
 }
 
-label:focus svg {
+label:focus-within svg {
   fill: var(--logo-web-color);
+  transition: fill var(--transition);
 }
 
 .terms-and-conditions {
